@@ -1,0 +1,122 @@
+# dune runtest
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/scottfo/Projects/languages/ocaml/exercises
+# Auto-detected concurrency: 12
+$ /home/scottfo/.opam/default/bin/ocamlc.opt -config > /tmp/dune_46c20d_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; ocaml_bin = External "/home/scottfo/.opam/default/bin"
+#  ; ocaml = Ok External "/home/scottfo/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/home/scottfo/.opam/default/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/scottfo/.opam/default/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/scottfo/.opam/default/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/scottfo/.opam/default/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" :
+#            "/home/scottfo/.opam/default/lib/ocaml:/home/scottfo/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/scottfo/.opam/default/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/home/scottfo/Projects/languages/ocaml/exercises"
+#        ; "INSIDE_DUNE" :
+#            "/home/scottfo/Projects/languages/ocaml/exercises/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/scottfo/Projects/languages/ocaml/exercises/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/scottfo/Projects/languages/ocaml/exercises/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/scottfo/Projects/languages/ocaml/exercises/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths =
+#      [ External "/home/scottfo/.opam/default/lib/ocaml"
+#      ; External "/home/scottfo/.opam/default/lib"
+#      ]
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "5.0.0"
+#      ; standard_library_default = "/home/scottfo/.opam/default/lib/ocaml"
+#      ; standard_library = "/home/scottfo/.opam/default/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X032"
+#      ; cmi_magic_number = "Caml1999I032"
+#      ; cmo_magic_number = "Caml1999O032"
+#      ; cma_magic_number = "Caml1999A032"
+#      ; cmx_magic_number = "Caml1999Y032"
+#      ; cmxa_magic_number = "Caml1999Z032"
+#      ; ast_impl_magic_number = "Caml1999M032"
+#      ; ast_intf_magic_number = "Caml1999N032"
+#      ; cmxs_magic_number = "Caml1999D032"
+#      ; cmt_magic_number = "Caml1999T032"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/.sandbox/8592a4727c24bbb703dad9ac0c25160f/default && .ppx/bfcab61e6a21ecf6d2f80029fc1ef484/ppx.exe --cookie 'inline_tests="enabled"' --cookie 'library-name="tail_of_list"' -o lib/tail_of_list.pp.ml --impl lib/tail_of_list.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /home/scottfo/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.tail_of_list.objs/byte -I /home/scottfo/.opam/default/lib/base -I /home/scottfo/.opam/default/lib/base/base_internalhash_types -I /home/scottfo/.opam/default/lib/base/caml -I /home/scottfo/.opam/default/lib/base/shadow_stdlib -I /home/scottfo/.opam/default/lib/jane-street-headers -I /home/scottfo/.opam/default/lib/ppx_compare/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_hash/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_inline_test/config -I /home/scottfo/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/scottfo/.opam/default/lib/sexplib0 -I /home/scottfo/.opam/default/lib/time_now -no-alias-deps -opaque -o lib/.tail_of_list.objs/byte/tail_of_list.cmo -c -impl lib/tail_of_list.pp.ml)
+$ (cd _build/default && /home/scottfo/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.tail_of_list.objs/byte -I lib/.tail_of_list.objs/native -I /home/scottfo/.opam/default/lib/base -I /home/scottfo/.opam/default/lib/base/base_internalhash_types -I /home/scottfo/.opam/default/lib/base/caml -I /home/scottfo/.opam/default/lib/base/shadow_stdlib -I /home/scottfo/.opam/default/lib/jane-street-headers -I /home/scottfo/.opam/default/lib/ppx_compare/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_enumerate/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_hash/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_inline_test/config -I /home/scottfo/.opam/default/lib/ppx_inline_test/runtime-lib -I /home/scottfo/.opam/default/lib/ppx_sexp_conv/runtime-lib -I /home/scottfo/.opam/default/lib/sexplib0 -I /home/scottfo/.opam/default/lib/time_now -intf-suffix .ml -no-alias-deps -opaque -o lib/.tail_of_list.objs/native/tail_of_list.cmx -c -impl lib/tail_of_list.pp.ml)
+$ (cd _build/default && /home/scottfo/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/tail_of_list.cmxa lib/.tail_of_list.objs/native/tail_of_list.cmx)
+$ (cd _build/default && /home/scottfo/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -g -o lib/.tail_of_list.inline-tests/inline_test_runner_tail_of_list.exe /home/scottfo/.opam/default/lib/ppx_inline_test/config/inline_test_config.cmxa /home/scottfo/.opam/default/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/scottfo/.opam/default/lib/base/base_internalhash_types /home/scottfo/.opam/default/lib/base/caml/caml.cmxa /home/scottfo/.opam/default/lib/sexplib0/sexplib0.cmxa /home/scottfo/.opam/default/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/scottfo/.opam/default/lib/base/base.cmxa -I /home/scottfo/.opam/default/lib/base /home/scottfo/.opam/default/lib/jane-street-headers/jane_street_headers.cmxa /home/scottfo/.opam/default/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/scottfo/.opam/default/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/scottfo/.opam/default/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/scottfo/.opam/default/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/scottfo/.opam/default/lib/time_now/time_now.cmxa -I /home/scottfo/.opam/default/lib/time_now /home/scottfo/.opam/default/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa lib/tail_of_list.cmxa /home/scottfo/.opam/default/lib/ppx_inline_test/runner/lib/ppx_inline_test_runner_lib.cmxa -I /home/scottfo/.opam/default/lib/ppx_inline_test/runner/lib lib/.tail_of_list.inline-tests/.tail_of_list.inline-tests.eobjs/native/dune__exe__Inline_test_runner_tail_of_list.cmx -linkall)
+$ (cd _build/.sandbox/e023e7cb9e624b33a9218ba4e5e313ec/default/lib && .tail_of_list.inline-tests/inline_test_runner_tail_of_list.exe inline-test-runner tail_of_list -source-tree-root .. -diff-cmd -)

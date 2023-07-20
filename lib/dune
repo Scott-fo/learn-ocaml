@@ -1,0 +1,4 @@
+(library
+ (name tail_of_list)
+ (inline_tests)
+ (preprocess (pps ppx_inline_test)))
