@@ -49,3 +49,36 @@ let flatten list =
 let%test "Flatten list" =
   flatten [ One "a"; Many [ One "b"; Many [ One "c"; One "d" ]; One "e" ] ]
   = [ "a"; "b"; "c"; "d"; "e" ]
+
+let rec compress = function
+  | a :: (b :: _ as t) -> if a = b then compress t else a :: compress t
+  | smaller -> smaller
+
+let%test "Remove duplicates from a list" =
+  compress
+    [ "a"; "a"; "a"; "a"; "b"; "c"; "c"; "a"; "a"; "d"; "e"; "e"; "e"; "e" ]
+  = [ "a"; "b"; "c"; "a"; "d"; "e" ]
+
+let pack list =
+  let rec aux current acc = function
+    | [] -> []
+    | [ x ] -> (x :: current) :: acc
+    | a :: (b :: _ as t) ->
+        if a = b then aux (a :: current) acc t
+        else aux [] ((a :: current) :: acc) t
+  in
+  List.rev (aux [] [] list)
+
+let%test "Pack consecutive duplicates" =
+  pack
+    [
+      "a"; "a"; "a"; "a"; "b"; "c"; "c"; "a"; "a"; "d"; "d"; "e"; "e"; "e"; "e";
+    ]
+  = [
+      [ "a"; "a"; "a"; "a" ];
+      [ "b" ];
+      [ "c"; "c" ];
+      [ "a"; "a" ];
+      [ "d"; "d" ];
+      [ "e"; "e"; "e"; "e" ];
+    ]
